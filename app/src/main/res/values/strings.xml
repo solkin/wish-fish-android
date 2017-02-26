@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Wish Lists</string>
+    <string name="my_wish_list">Желания</string>
+    <string name="contacts">Контакты</string>
+    <string name="ideas">Идеи</string>
+    <string name="profile">Профиль</string>
+    <string name="retry">Повторить</string>
+    <string name="wish_list_error">Ошибка загрузки списка желаний. Пожалуйста, повторите попытку.</string>
+</resources>
