@@ -1,2 +1,2 @@
-# wish-lists-android
+# Wish Lists
 Wish lists Android app
