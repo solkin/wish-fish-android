@@ -1,6 +1,7 @@
 package com.tomclaw.wishlists.main.view;
 
 import android.content.Context;
+import android.os.Bundle;
 
 import org.androidannotations.annotations.EViewGroup;
 
@@ -10,8 +11,8 @@ import org.androidannotations.annotations.EViewGroup;
 @EViewGroup
 public class ContactsView extends MainView {
 
-    public ContactsView(Context context) {
-        super(context);
+    public ContactsView(Context context, Bundle state) {
+        super(context, state);
     }
 
     @Override
@@ -32,5 +33,10 @@ public class ContactsView extends MainView {
 
     @Override
     public void refresh() {
+    }
+
+    @Override
+    public Bundle onSaveState() {
+        return null;
     }
 }

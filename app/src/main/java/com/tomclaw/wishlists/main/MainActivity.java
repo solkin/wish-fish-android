@@ -1,5 +1,7 @@
 package com.tomclaw.wishlists.main;
 
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.ViewFlipper;
@@ -27,6 +29,11 @@ public class MainActivity
         extends AppCompatActivity
         implements MainView.ActivityCallback {
 
+    private static final String KEY_WISHES_VIEW = "wishes_view";
+    private static final String KEY_IDEAS_VIEW = "ideas_view";
+    private static final String KEY_CONTACTS_VIEW = "contacts_view";
+    private static final String KEY_PROFILE_VIEW = "profile_view";
+
     @ViewById
     Toolbar toolbar;
 
@@ -38,6 +45,39 @@ public class MainActivity
 
     private MainView mainView;
 
+    private WishesView wishesView;
+    private IdeasView ideasView;
+    private ContactsView contactsView;
+    private ProfileView profileView;
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        Bundle wishesState = null;
+        Bundle ideasState = null;
+        Bundle contactsState = null;
+        Bundle profileState = null;
+        if (savedInstanceState != null) {
+            wishesState = savedInstanceState.getBundle(KEY_WISHES_VIEW);
+            ideasState = savedInstanceState.getBundle(KEY_IDEAS_VIEW);
+            contactsState = savedInstanceState.getBundle(KEY_CONTACTS_VIEW);
+            profileState = savedInstanceState.getBundle(KEY_PROFILE_VIEW);
+        }
+        wishesView = WishesView_.build(this, wishesState);
+        ideasView = IdeasView_.build(this, ideasState);
+        contactsView = ContactsView_.build(this, contactsState);
+        profileView = ProfileView_.build(this, profileState);
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putBundle(KEY_WISHES_VIEW, wishesView.onSaveState());
+        outState.putBundle(KEY_IDEAS_VIEW, ideasView.onSaveState());
+        outState.putBundle(KEY_CONTACTS_VIEW, contactsView.onSaveState());
+        outState.putBundle(KEY_PROFILE_VIEW, profileView.onSaveState());
+    }
+
     @AfterViews
     void initToolbar() {
         setSupportActionBar(toolbar);
@@ -45,16 +85,9 @@ public class MainActivity
 
     @AfterViews
     void initMainViews() {
-        WishesView wishesView = WishesView_.build(this);
         mainViews.addView(wishesView);
-
-        IdeasView ideasView = IdeasView_.build(this);
         mainViews.addView(ideasView);
-
-        ContactsView contactsView = ContactsView_.build(this);
         mainViews.addView(contactsView);
-
-        ProfileView profileView = ProfileView_.build(this);
         mainViews.addView(profileView);
 
         mainViews.setDisplayedChild(0);

@@ -2,6 +2,8 @@ package com.tomclaw.wishlists.main.view;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.FrameLayout;
 
@@ -15,7 +17,7 @@ public abstract class MainView extends FrameLayout {
     protected View view;
     private WeakReference<ActivityCallback> weakActivityCallback;
 
-    public MainView(Context context) {
+    public MainView(Context context, Bundle state) {
         super(context);
     }
 
@@ -40,6 +42,8 @@ public abstract class MainView extends FrameLayout {
             callback.startActivity(intent);
         }
     }
+
+    public abstract Bundle onSaveState();
 
     public interface ActivityCallback {
 
