@@ -83,7 +83,10 @@ public class WishesController extends AbstractController<WishesController.WishLi
 
     @Override
     public Bundle onSaveState() {
-        ArrayList<WishItem> items = new ArrayList<>(wishItems);
+        ArrayList<WishItem> items = null;
+        if (wishItems != null) {
+            items = new ArrayList<>(wishItems);
+        }
         Bundle bundle = new Bundle();
         bundle.putParcelableArrayList(KEY_WISH_ITEMS, items);
         bundle.putBoolean(KEY_IS_ERROR, isError);

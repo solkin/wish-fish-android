@@ -1,5 +1,6 @@
 package com.tomclaw.wishlists.main.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -25,6 +26,7 @@ import java.util.List;
 /**
  * Created by ivsolkin on 08.01.17.
  */
+@SuppressLint("ViewConstructor")
 @EViewGroup(R.layout.wish_list_view)
 public class WishesView extends MainView implements WishesController.WishListCallback {
 

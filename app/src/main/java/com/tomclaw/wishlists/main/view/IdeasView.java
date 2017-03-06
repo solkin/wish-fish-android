@@ -1,5 +1,6 @@
 package com.tomclaw.wishlists.main.view;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import org.androidannotations.annotations.EViewGroup;
 /**
  * Created by ivsolkin on 08.01.17.
  */
+@SuppressLint("ViewConstructor")
 @EViewGroup
 public class IdeasView extends MainView {
 
