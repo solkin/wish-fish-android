@@ -37,6 +37,8 @@ public class ImageWishView extends FrameLayout {
         Glide.with(getContext())
                 .load(image.getUrl())
                 .placeholder(R.drawable.gift)
+                .override(remoteImageSize.getWidth(), remoteImageSize.getHeight())
+                .centerCrop()
                 .into(imageView);
     }
 

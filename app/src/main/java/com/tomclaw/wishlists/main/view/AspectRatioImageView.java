@@ -1,13 +1,13 @@
 package com.tomclaw.wishlists.main.view;
 
 import android.content.Context;
+import android.support.v7.widget.AppCompatImageView;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
 /**
  * Created by solkin on 27.02.17.
  */
-public class AspectRatioImageView extends ImageView {
+public class AspectRatioImageView extends AppCompatImageView {
 
     private float aspectRatio = 1.0f;
 
