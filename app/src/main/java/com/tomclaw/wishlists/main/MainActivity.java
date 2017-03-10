@@ -67,6 +67,9 @@ public class MainActivity
         ideasView = IdeasView_.build(this, ideasState);
         contactsView = ContactsView_.build(this, contactsState);
         profileView = ProfileView_.build(this, profileState);
+
+        // TODO: use some credentials check to run authentication.
+        AuthActivity_.intent(this).start();
     }
 
     @Override

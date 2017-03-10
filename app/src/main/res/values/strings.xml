@@ -6,4 +6,9 @@
     <string name="profile">Профиль</string>
     <string name="retry">Повторить</string>
     <string name="wish_list_error">Ошибка загрузки списка желаний. Пожалуйста, повторите попытку.</string>
+    <string name="enter_app">Войти</string>
+    <string name="country">Страна</string>
+    <string name="phone_number">Номер телефона</string>
+    <string name="next">Далее</string>
+    <string name="your_phone">Ваш телефон</string>
 </resources>

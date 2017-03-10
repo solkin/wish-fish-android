@@ -39,6 +39,7 @@ dependencies {
     compile 'com.aurelhubert:ahbottomnavigation:2.0.3'
     compile 'com.squareup.retrofit2:retrofit:2.2.0'
     compile 'com.squareup.retrofit2:converter-gson:2.2.0'
+    compile 'com.github.pinball83:masked-edittext:1.0.3'
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
     testCompile 'junit:junit:4.12'
