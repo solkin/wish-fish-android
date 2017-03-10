@@ -8,7 +8,6 @@ import android.text.Editable;
 import android.view.inputmethod.EditorInfo;
 import android.widget.TextView;
 
-import com.orhanobut.logger.Logger;
 import com.tomclaw.wishlists.R;
 import com.tomclaw.wishlists.main.view.HintEditText;
 import com.tomclaw.wishlists.util.CountriesProvider;
@@ -24,6 +23,8 @@ import org.androidannotations.annotations.EditorAction;
 import org.androidannotations.annotations.OnActivityResult;
 import org.androidannotations.annotations.ViewById;
 
+import static com.tomclaw.wishlists.main.CountryActivity.EXTRA_COUNTRY;
+
 /**
  * Created by solkin on 09.03.17.
  */
@@ -31,7 +32,6 @@ import org.androidannotations.annotations.ViewById;
 public class AuthActivity extends AppCompatActivity {
 
     private static final int REQUEST_COUNTRY_CODE = 1;
-    private static final String EXTRA_COUNTRY = "country";
 
     @ViewById
     Toolbar toolbar;

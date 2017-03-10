@@ -3,6 +3,7 @@ package com.tomclaw.wishlists.main.adapter.view;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.tomclaw.wishlists.R;
@@ -14,7 +15,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by solkin on 10.03.17.
  */
 @EViewGroup(R.layout.country_view)
-public class CountryView extends LinearLayout {
+public class CountryView extends RelativeLayout {
 
     @ViewById
     TextView countryName;
