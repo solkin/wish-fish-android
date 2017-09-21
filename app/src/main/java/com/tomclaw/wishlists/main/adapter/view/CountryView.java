@@ -2,7 +2,6 @@ package com.tomclaw.wishlists.main.adapter.view;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 

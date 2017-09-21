@@ -69,7 +69,7 @@
                     android:background="@android:color/transparent"
                     android:inputType="phone"
                     android:maxLines="1"
-                    tools:text="9997898765"/>
+                    tools:text="9997898765" />
 
             </LinearLayout>
 

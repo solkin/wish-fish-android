@@ -19,9 +19,15 @@ import java.util.List;
  */
 public class CountryAdapter extends RecyclerView.Adapter<CountryHolder> implements FastScrollAdapter {
 
-    private @NonNull Context context;
-    private @NonNull final List<Country> countries;
-    private @Nullable CountryClickListener listener;
+    private
+    @NonNull
+    Context context;
+    private
+    @NonNull
+    final List<Country> countries;
+    private
+    @Nullable
+    CountryClickListener listener;
 
     public CountryAdapter(@NonNull Context context, @NonNull List<Country> countries) {
         this.context = context;

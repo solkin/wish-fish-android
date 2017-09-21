@@ -2,8 +2,6 @@ package com.tomclaw.wishlists.core;
 
 import com.tomclaw.wishlists.main.dto.WishItem;
 
-import org.androidannotations.annotations.EBean;
-
 import java.util.List;
 
 import retrofit2.Call;
