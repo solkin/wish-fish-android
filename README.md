@@ -1,2 +1,2 @@
-# Wish Lists
+# WishFish
 Wish lists Android app
