@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.tomclaw.wishlists.R;
+import com.tomclaw.wishlists.core.GlideApp;
 import com.tomclaw.wishlists.main.dto.Image;
 import com.tomclaw.wishlists.main.dto.Size;
 import com.tomclaw.wishlists.main.view.AspectRatioImageView;
@@ -34,7 +35,7 @@ public class ImageWishView extends FrameLayout {
         float aspectRatio = (float) remoteImageSize.getHeight() / (float) remoteImageSize.getWidth();
         imageView.setAspectRatio(aspectRatio);
 
-        Glide.with(getContext())
+        GlideApp.with(getContext())
                 .load(image.getUrl())
                 .placeholder(R.drawable.gift)
                 .override(remoteImageSize.getWidth(), remoteImageSize.getHeight())
